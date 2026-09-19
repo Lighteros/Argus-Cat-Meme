@@ -438,6 +438,42 @@ h1 {
   line-height: 1.6;
 }
 
+.ca-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 8px 12px 8px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+}
+
+.ca-bar:hover {
+  border-color: rgba(201, 184, 255, 0.5);
+}
+
+.ca-label {
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(240, 161, 90, 0.16);
+  color: var(--ginger);
+  letter-spacing: 0.14em;
+  font-size: 0.68rem;
+}
+
+.ca-value {
+  font-size: 0.86rem;
+  letter-spacing: 0.04em;
+  color: var(--mist);
+}
+
+.ca-hint {
+  color: var(--lilac);
+  font-size: 0.75rem;
+}
+
 .hero-cta {
   display: flex;
   flex-wrap: wrap;

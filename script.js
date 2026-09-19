@@ -99,6 +99,23 @@
     link.addEventListener("click", () => nav.classList.remove("open"));
   });
 
+  const caBtn = document.getElementById("ca-copy");
+  const caHint = document.getElementById("ca-hint");
+  if (caBtn) {
+    caBtn.addEventListener("click", async () => {
+      const value = caBtn.dataset.ca || "";
+      try {
+        await navigator.clipboard.writeText(value);
+        caHint.textContent = "Copied";
+      } catch (error) {
+        caHint.textContent = "Copy failed";
+      }
+      window.setTimeout(() => {
+        caHint.textContent = "Copy";
+      }, 1600);
+    });
+  }
+
   const io = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
